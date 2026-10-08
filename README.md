@@ -1,50 +1,56 @@
-# [Project Name]
+# [CampusBuddy]
 
-> [One-line description of the project and what it does.]
+> [A mobile-friendly web application featuring a natural language chat interface that answers student queries strictly using a curated campus knowledge base.]
 
 ## Team
 
-**Team Name:** [Team Name]
+**Team Name:** [Team Kernel]
 
 
 | Member | Contribution   |
 | ------ | -------------- |
-| [Name] | [Contribution] |
-| [Name] | [Contribution] |
-| [Name] | [Contribution] |
-| [Name] | [Contribution] |
+| [Jayithri] | [Connected GitHub environment, engineered project prompts, and integrated knowledge base logic.] |
+| [Jaya Hasini] | [Assisted with user interface layout design, testing fallback edge cases, and mobile optimization.] |
+| [Sahasra] | [Curated the 25 core campus question-and-answer datasets for the internal system knowledge base.] |
+| [Mihir] | [Managed repository synchronization, environment staging, and sandbox deployment validation.] |
 
 
 ## Problem Statement
 
 ### The Problem
 
-[Describe the problem being addressed, who is affected by it, and the context in which it occurs.]
+[Navigating university life can be incredibly overwhelming for both freshers and returning students. Crucial daily information—such as library operational hours, financial aid office locations, IT support steps, and cafeteria schedules—is frequently scattered across massive, unorganized college websites, confusing PDFs, or physical bulletin boards. Students lose valuable time trying to find quick, simple answers to routine administrative questions.]
 
 ### Why We Chose This Problem
 
-[Explain why the team selected this problem and why solving it is important.]
+[We chose this problem to eliminate institutional navigation friction. Traditional campus portals are complex, lack mobile responsiveness, and require manual searching. By building an accessible tool, we ensure students get immediate, accurate answers, lowering the stress of administrative campus tasks and letting them focus heavily on their academics.]
 
 ## Solution
 
-[Describe the proposed solution and how it addresses the problem.]
+[CampusBuddy addresses this by providing a clean, responsive web dashboard centered around an intelligent natural language chat interface. Instead of hunting through links, students ask questions in plain english. The application intercepts queries and matches them against a strictly closed, verified campus information database, completely eliminating "AI hallucinations" by defaulting to a helpful administrative fallback message when an answer cannot be verified.]
 
 ### Key Features
 
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
-- [Feature 4]
+- [Natural Language Processing (NLP) Chat Interface: Students can type free-form, conversational questions to instantly pull matching administrative rules.]
+- [Suggested Quick-Question Buttons: Features 4 high-frequency shortcut buttons for instant, single-tap access to critical daily data (Wi-Fi, Exams, Health Centre, Library).]
+- [Strict Context Verification (Hallucination Control): Protects students from wrong data by safely returning a fallback message ("I don't have that info...") if a query falls outside the official campus data scope.]
+- [Mobile-First Responsive Layout: Designed completely from scratch to be clean, accessible, and fast on all iOS, Android, and desktop screens.]
 
 ## Innovation and Differentiation
 
-[Explain what is innovative about the approach and how it differs from existing or conventional solutions.]
+[Standard AI chatbots pull information broadly from the open web, often resulting in inaccurate, generic, or completely hallucinated answers that do not apply to a specific college campus. CampusBuddy innovates by implementing a strict Closed-World Assumption model. It acts as a highly disciplined system that prioritizes accurate institutional guardrails over generic text generation, guaranteeing that a student never receives confidently incorrect information regarding critical events like exams or medical emergencies.]
 
 ## Technical Implementation
 
 ### Architecture
 
-[Add the system architecture or workflow Mermaid diagram here.]
+[graph TD
+    User([Student / Mobile Device]) -->|1. Clicks Button or Enters Query| UI[Frontend: Clean UI Dashboard]
+    UI -->|2. Submits Text String| Engine[Chatbot Logic / Query Matcher]
+    DB[(Internal Campus Knowledge Base)] <-->|3. Strict Context Validation| Engine
+    Engine -->|4a. Info Found: Return Short Answer| UI
+    Engine -->|4b. Info Missing: Trigger Fallback Rule| UI
+]
 
 ### Technology Stack
 
