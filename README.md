@@ -1,4 +1,4 @@
-# [Project Name]
+# []
 
 > [One-line description of the project and what it does.]
 
